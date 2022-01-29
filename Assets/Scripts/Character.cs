@@ -17,6 +17,10 @@ public class Character : MonoBehaviour
 
     public int lives;
 
+    public GameObject spawnPoint;
+
+    public bool dead = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +50,6 @@ public class Character : MonoBehaviour
 
 
         transform.position = newpos;
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -56,6 +59,9 @@ public class Character : MonoBehaviour
         {
             Debug.Log("H I T");
             lives--;
+
+            gameObject.transform.position = spawnPoint.transform.position;
+
         }
     }
 }
