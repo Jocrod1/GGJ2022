@@ -15,10 +15,12 @@ public class Character : MonoBehaviour
 
     public TypeChar typeCharacter = TypeChar.first;
 
+    public int lives;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        lives = 3;
     }
 
     // Update is called once per frame
@@ -33,7 +35,7 @@ public class Character : MonoBehaviour
 
         Vector3 ScreenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
 
-        Debug.Log(ScreenBounds);
+        // Debug.Log(ScreenBounds);
 
         Vector3 newpos = transform.position + movement;
 
@@ -45,5 +47,15 @@ public class Character : MonoBehaviour
 
         transform.position = newpos;
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.tag);
+        if (collision.tag == "Projectile")
+        {
+            Debug.Log("H I T");
+            lives--;
+        }
     }
 }
