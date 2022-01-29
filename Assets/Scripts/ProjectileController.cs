@@ -17,13 +17,25 @@ public class ProjectileController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 ScreenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+
         uniDirection = direction.normalized;
 
         gameObject.transform.Translate(uniDirection * speed * Time.deltaTime);
 
-        if (gameObject.transform.position.y < -10)
-        {
-            Destroy(gameObject);
-        }
+        //if (gameObject.transform.position.y < -10)
+        //{
+        //    Destroy(gameObject);
+        //}
+
+        //if (gameObject.transform.position.y > ScreenBounds.y)
+        //{
+        //    Destroy(gameObject);
+        //}
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
