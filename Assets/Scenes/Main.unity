@@ -3478,6 +3478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "InitialMen\xFAAnimator": {fileID: 2130711203}
   EnemySpawnerAnimator: {fileID: 887510813}
+  LivesAnimator: {fileID: 261633761}
   InGame: 0
 --- !u!4 &1852204313
 Transform:
@@ -3676,6 +3677,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8571401337029271203, guid: df9cd59bb7e89f84baeff7f929b3eaeb,
         type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4e102d8c1cf6fb144a450b51d7d72c79,
+        type: 3}
+    - target: {fileID: 8571401337029271203, guid: df9cd59bb7e89f84baeff7f929b3eaeb,
+        type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 40
       objectReference: {fileID: 0}
@@ -3684,6 +3691,12 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 889980105}
+    - target: {fileID: 8571401337177082632, guid: df9cd59bb7e89f84baeff7f929b3eaeb,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4e102d8c1cf6fb144a450b51d7d72c79,
+        type: 3}
     - target: {fileID: 8571401337177082632, guid: df9cd59bb7e89f84baeff7f929b3eaeb,
         type: 3}
       propertyPath: m_FontData.m_FontSize
