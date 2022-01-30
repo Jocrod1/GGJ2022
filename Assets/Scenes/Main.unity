@@ -344,8 +344,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
+      propertyPath: ToAim
+      value: 
+      objectReference: {fileID: 889980105}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: shooting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
       propertyPath: Aim2Target
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
@@ -353,6 +363,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2063042353335541751, guid: f19f808d699f02a4d972f90d481d35e4,
         type: 3}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: RateOfFire
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: burstCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: HowManyLines
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: fieldOfShoooting
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 3867738366037821955, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
       propertyPath: m_Name
@@ -692,6 +722,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1400014425586937744, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014425586937744, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014425694194037, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014425694194037, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1400014426052355664, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
       propertyPath: m_Color.b
@@ -711,6 +761,16 @@ PrefabInstance:
         type: 3}
       propertyPath: Aim2Target
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: HowManyLines
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: fieldOfShoooting
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3867738366037821955, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
@@ -1065,8 +1125,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
+      propertyPath: ToAim
+      value: 
+      objectReference: {fileID: 1552197010}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: shooting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
       propertyPath: Aim2Target
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: Projectile
+      value: 
+      objectReference: {fileID: 619420512807033876, guid: 23b1af5f07828d94cad28ba9b17469b1,
+        type: 3}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: RateOfFire
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: burstCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: HowManyLines
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: fieldOfShoooting
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3867738366037821955, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
@@ -1148,6 +1244,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1400014425586937744, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014425586937744, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014425694194037, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014425694194037, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1400014426052355664, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
       propertyPath: m_Color.a
@@ -1181,8 +1297,23 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
+      propertyPath: burstCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: HowManyLines
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
       propertyPath: projectileSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: fieldOfShoooting
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3867738366037821955, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
@@ -2640,6 +2771,26 @@ PrefabInstance:
       propertyPath: Aim2Target
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: RateOfFire
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: burstCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: HowManyLines
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: fieldOfShoooting
+      value: 320
+      objectReference: {fileID: 0}
     - target: {fileID: 3867738366037821955, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
       propertyPath: m_Name
@@ -3028,6 +3179,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1400014425586937744, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014425586937744, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014425694194037, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014425694194037, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1400014426052355664, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
       propertyPath: m_Color.a
@@ -3059,6 +3230,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2063042353335541751, guid: f19f808d699f02a4d972f90d481d35e4,
         type: 3}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: RateOfFire
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: burstCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: HowManyLines
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
+      propertyPath: fieldOfShoooting
+      value: 320
+      objectReference: {fileID: 0}
     - target: {fileID: 3867738366037821955, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
       propertyPath: m_Name
