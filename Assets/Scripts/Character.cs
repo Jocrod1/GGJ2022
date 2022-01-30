@@ -29,6 +29,9 @@ public class Character : MonoBehaviour
         lives = 3;
     }
 
+    public float angle;
+    public float Smoothing = 3; 
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -41,10 +44,12 @@ public class Character : MonoBehaviour
 
         if(move.x != 0 || move.y != 0)
         {
-            float angle = Mathf.Atan2(move.normalized.y, move.normalized.x) * Mathf.Rad2Deg;
+            angle = Mathf.Atan2(move.normalized.y, move.normalized.x) * Mathf.Rad2Deg;
 
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
         }
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, angle - 90)), Smoothing * Time.deltaTime);
+
 
 
         Vector3 movement = new Vector3(move.x * MovementSpeed * Time.deltaTime, move.y * MovementSpeed * Time.deltaTime, 0);
