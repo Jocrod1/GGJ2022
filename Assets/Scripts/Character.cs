@@ -66,7 +66,14 @@ public class Character : MonoBehaviour
             Debug.Log("H I T: " + transform.name);
             lives--;
 
-            gameObject.transform.position = spawnPoint.transform.position;
+            if (lives > 0)
+            {
+                gameObject.transform.position = spawnPoint.transform.position;
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }
