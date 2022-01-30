@@ -29,6 +29,9 @@ public class Character : MonoBehaviour
         lives = 3;
     }
 
+    public float angle = 90;
+    public float Smoothing = 3; 
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -38,6 +41,16 @@ public class Character : MonoBehaviour
         if (typeCharacter == TypeChar.second)
             typeinput = "2nd";
         Vector2 move = new Vector2(Input.GetAxisRaw(typeinput +"Horizontal"), Input.GetAxisRaw(typeinput + "Vertical"));
+
+        if(move.x != 0 || move.y != 0)
+        {
+            angle = Mathf.Atan2(move.normalized.y, move.normalized.x) * Mathf.Rad2Deg;
+
+        }
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, angle - 90)), Smoothing * Time.deltaTime);
+
+
 
         Vector3 movement = new Vector3(move.x * MovementSpeed * Time.deltaTime, move.y * MovementSpeed * Time.deltaTime, 0);
 
@@ -72,7 +85,7 @@ public class Character : MonoBehaviour
             }
             else
             {
-                gameObject.SetActive(false);
+                GM.ResetScene();
             }
         }
     }
