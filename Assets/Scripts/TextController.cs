@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class TextController : MonoBehaviour
 {
     public GameObject character;
-    public Text textBox;
+
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
 
     // Start is called before the first frame update
     void Start()
@@ -19,20 +22,30 @@ public class TextController : MonoBehaviour
     {
         switch (character.GetComponent<Character>().lives)
         {
-            case 3: 
-                textBox.text = "  ";
+            case 3:
+                heart1.SetActive(true);
+                heart2.SetActive(true);
+                heart3.SetActive(true);
                 break;
             case 2:
-                textBox.text = " ";
+                heart1.SetActive(true);
+                heart2.SetActive(true);
+                heart3.SetActive(false);
                 break;
             case 1:
-                textBox.text = "";
+                heart1.SetActive(true);
+                heart2.SetActive(false);
+                heart3.SetActive(false);
                 break;
             case 0:
-                textBox.text = "";
+                heart1.SetActive(false);
+                heart2.SetActive(false);
+                heart3.SetActive(false);
                 break;
             default:
-                textBox.text = "  ";
+                heart1.SetActive(true);
+                heart2.SetActive(true);
+                heart3.SetActive(true);
                 break;
         }
     }
