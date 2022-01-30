@@ -1057,6 +1057,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
         type: 3}
+      propertyPath: burstCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400014426052355678, guid: 01500626a5ea9384588a4d1fca5e5af5,
+        type: 3}
       propertyPath: HowManyLines
       value: 8
       objectReference: {fileID: 0}
@@ -2316,6 +2321,7 @@ GameObject:
   - component: {fileID: 889980107}
   - component: {fileID: 889980106}
   - component: {fileID: 889980110}
+  - component: {fileID: 889980111}
   m_Layer: 7
   m_Name: '2ndPlayer '
   m_TagString: Untagged
@@ -2341,7 +2347,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 2079184557}
   dead: 0
   GM: {fileID: 1852204312}
-  angle: 0
+  angle: 90
   Smoothing: 15
 --- !u!61 &889980107
 BoxCollider2D:
@@ -2455,6 +2461,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &889980111
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889980105}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: add81f6c23f2f5643a03ae3dc62a2713, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &907259015 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3867738366037821955, guid: 01500626a5ea9384588a4d1fca5e5af5,
@@ -3674,6 +3699,7 @@ GameObject:
   - component: {fileID: 1552197012}
   - component: {fileID: 1552197011}
   - component: {fileID: 1552197015}
+  - component: {fileID: 1552197016}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -3699,7 +3725,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1849152048}
   dead: 0
   GM: {fileID: 1852204312}
-  angle: 0
+  angle: 90
   Smoothing: 15
 --- !u!61 &1552197012
 BoxCollider2D:
@@ -3813,6 +3839,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1552197016
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552197010}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: add81f6c23f2f5643a03ae3dc62a2713, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1568205337
 GameObject:
   m_ObjectHideFlags: 0

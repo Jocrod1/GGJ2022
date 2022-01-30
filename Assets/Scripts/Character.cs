@@ -29,7 +29,7 @@ public class Character : MonoBehaviour
         lives = 3;
     }
 
-    public float angle;
+    public float angle = 90;
     public float Smoothing = 3; 
 
     // Update is called once per frame
