@@ -39,6 +39,14 @@ public class Character : MonoBehaviour
             typeinput = "2nd";
         Vector2 move = new Vector2(Input.GetAxisRaw(typeinput +"Horizontal"), Input.GetAxisRaw(typeinput + "Vertical"));
 
+        if(move.x != 0 || move.y != 0)
+        {
+            float angle = Mathf.Atan2(move.normalized.y, move.normalized.x) * Mathf.Rad2Deg;
+
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+        }
+
+
         Vector3 movement = new Vector3(move.x * MovementSpeed * Time.deltaTime, move.y * MovementSpeed * Time.deltaTime, 0);
 
         Vector3 ScreenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
@@ -72,7 +80,7 @@ public class Character : MonoBehaviour
             }
             else
             {
-                gameObject.SetActive(false);
+                GM.ResetScene();
             }
         }
     }
