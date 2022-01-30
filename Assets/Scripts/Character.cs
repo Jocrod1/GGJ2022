@@ -61,7 +61,6 @@ public class Character : MonoBehaviour
             lives--;
 
             gameObject.transform.position = spawnPoint.transform.position;
-
         }
     }
 }
