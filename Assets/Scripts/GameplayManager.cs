@@ -7,6 +7,7 @@ public class GameplayManager : MonoBehaviour
 {
     public Animator InitialMenúAnimator;
     public Animator EnemySpawnerAnimator;
+    public Animator LivesAnimator;
 
 
     public bool InGame = false;
@@ -14,6 +15,7 @@ public class GameplayManager : MonoBehaviour
     {
         InitialMenúAnimator.SetBool("InGame", true);
         EnemySpawnerAnimator.SetBool("InGame", true);
+        LivesAnimator.SetBool("InGame", true);
         InGame = true;
     }
     // Start is called before the first frame update

@@ -63,7 +63,7 @@ public class Character : MonoBehaviour
         Debug.Log(collision.tag);
         if (collision.tag == "Projectile")
         {
-            Debug.Log("H I T");
+            Debug.Log("H I T: " + transform.name);
             lives--;
 
             gameObject.transform.position = spawnPoint.transform.position;

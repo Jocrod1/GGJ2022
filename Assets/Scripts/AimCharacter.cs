@@ -99,6 +99,7 @@ public class AimCharacter : MonoBehaviour
             Vector3 LineNormalized = getAngle2normal(rotationAngle);
             GameObject obj = Instantiate(Projectile);
             obj.transform.position = transform.position + LineNormalized * 0.5f;
+            obj.GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color;
             ProjectileController ProjCrl = obj.GetComponent<ProjectileController>();
             ProjCrl.direction = LineNormalized;
             ProjCrl.speed = projectileSpeed;
@@ -116,6 +117,7 @@ public class AimCharacter : MonoBehaviour
                 Vector3 LineNormalized = getAngle2normal(rotationAngle + midFOS - linesAngle * i);
                 GameObject obj = Instantiate(Projectile);
                 obj.transform.position = transform.position + LineNormalized * 0.5f;
+                obj.GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color;
                 ProjectileController ProjCrl = obj.GetComponent<ProjectileController>();
                 ProjCrl.direction = LineNormalized;
                 ProjCrl.speed = projectileSpeed;                
