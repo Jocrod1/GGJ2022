@@ -14,6 +14,10 @@ public class EnemySpawner : MonoBehaviour
 
     public List<GameObject> Pj1EnemyList;
     public List<GameObject> Pj2EnemyList;
+
+
+    public GameplayManager GM;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +38,11 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnEnemy()
     {
+        if(pj1Stack.Count < 1)
+        {
+            GM.ResetScene();
+            return;
+        }
         Vector2 Limit = Size / 2f;
         float rangeX = Random.Range(Limit.x, -Limit.x);
         float rangeY = Random.Range(Limit.y, -Limit.y);

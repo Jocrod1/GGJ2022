@@ -21,6 +21,8 @@ public class Character : MonoBehaviour
 
     public bool dead = false;
 
+    public GameplayManager GM;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,8 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!GM.InGame)
+            return;
         string typeinput = "";
         if (typeCharacter == TypeChar.second)
             typeinput = "2nd";
@@ -54,6 +58,8 @@ public class Character : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!GM.InGame)
+            return;
         Debug.Log(collision.tag);
         if (collision.tag == "Projectile")
         {
