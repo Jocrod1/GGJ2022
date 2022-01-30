@@ -16,6 +16,8 @@ public class AimCharacter : MonoBehaviour
 
     public GameObject Projectile;
 
+    public float projectileSpeed = 5;
+
     public int burstCount = 1;
 
     public float RateOfFire = 0.3f;
@@ -56,16 +58,26 @@ public class AimCharacter : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            if(burstCount > 1)
-            {
-                StartCoroutine(FireBurst());
-            }
-            else
-            {
-                Fire();
-            }
+            Shoot();
         }
 
+    }
+
+    public void DestroyThis()
+    {
+        Destroy(transform.parent.gameObject);
+    }
+
+    public void Shoot()
+    {
+        if (burstCount > 1)
+        {
+            StartCoroutine(FireBurst());
+        }
+        else
+        {
+            Fire();
+        }
     }
 
     IEnumerator FireBurst()
@@ -87,7 +99,9 @@ public class AimCharacter : MonoBehaviour
             Vector3 LineNormalized = getAngle2normal(rotationAngle);
             GameObject obj = Instantiate(Projectile);
             obj.transform.position = transform.position + LineNormalized * 0.5f;
-            obj.GetComponent<ProjectileController>().direction = LineNormalized;
+            ProjectileController ProjCrl = obj.GetComponent<ProjectileController>();
+            ProjCrl.direction = LineNormalized;
+            ProjCrl.speed = projectileSpeed;
         }
         else if (shooting == TypeShooting.circular)
         {
@@ -102,8 +116,9 @@ public class AimCharacter : MonoBehaviour
                 Vector3 LineNormalized = getAngle2normal(rotationAngle + midFOS - linesAngle * i);
                 GameObject obj = Instantiate(Projectile);
                 obj.transform.position = transform.position + LineNormalized * 0.5f;
-                obj.GetComponent<ProjectileController>().direction = LineNormalized;
-                
+                ProjectileController ProjCrl = obj.GetComponent<ProjectileController>();
+                ProjCrl.direction = LineNormalized;
+                ProjCrl.speed = projectileSpeed;                
             }
         }
     }
